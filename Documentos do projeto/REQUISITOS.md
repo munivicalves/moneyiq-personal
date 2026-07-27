@@ -1,4 +1,4 @@
-# Documento de Requisitos — Sentinel Prime
+# Documento de Requisitos — MoneyIQ Personal
 
 **Sistema de Controle Financeiro Pessoal**
 Projetos de Software II — Especificação de Requisitos de Software (ERS)
@@ -21,7 +21,7 @@ Projetos de Software II — Especificação de Requisitos de Software (ERS)
 
 ### 1.1 Objetivo
 
-Especificar os requisitos funcionais e não funcionais do **Sentinel Prime**, um
+Especificar os requisitos funcionais e não funcionais do **MoneyIQ Personal**, um
 sistema de controle financeiro pessoal que permite ao usuário registrar e
 acompanhar receitas, despesas, gastos no cartão de crédito e visualizar um extrato
 consolidado com o saldo de cada período.
@@ -245,4 +245,4 @@ PostgreSQL, e está implantado em nuvem.
 
 ---
 
-*Sentinel Prime — Controle Financeiro Inteligente.*
+*MoneyIQ Personal — Controle Financeiro Inteligente.*

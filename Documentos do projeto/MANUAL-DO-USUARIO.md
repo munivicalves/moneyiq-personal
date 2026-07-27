@@ -1,4 +1,4 @@
-# Manual do Usuário — Sentinel Prime
+# Manual do Usuário — MoneyIQ Personal
 
 **Sistema de Controle Financeiro Pessoal**
 Documentação do Usuário — Projetos de Software II
@@ -24,7 +24,7 @@ Documentação do Usuário — Projetos de Software II
 
 ## 1. Sobre o sistema
 
-O **Sentinel Prime** é um sistema de controle financeiro pessoal que permite registrar
+O **MoneyIQ Personal** é um sistema de controle financeiro pessoal que permite registrar
 e acompanhar suas **receitas**, **despesas**, **gastos no cartão de crédito** e visualizar
 um **extrato consolidado** com o saldo de cada período.
 
@@ -46,7 +46,7 @@ Ambas usam a **mesma conta**: o que você cadastra em uma interface aparece na o
 
 **Versão Mobile**
 - Aparelho com Android.
-- Aplicativo Sentinel Prime instalado.
+- Aplicativo MoneyIQ Personal instalado.
 
 ---
 
@@ -291,4 +291,4 @@ período filtrado. Revise os lançamentos na **Conta Corrente**.
 
 ---
 
-*Sentinel Prime — Controle Financeiro Inteligente.*
+*MoneyIQ Personal — Controle Financeiro Inteligente.*

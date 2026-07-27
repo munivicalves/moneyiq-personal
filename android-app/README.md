@@ -1,6 +1,6 @@
-# Sentinel Prime Android
+# MoneyIQ Personal Android
 
-Scaffold inicial do aplicativo Android nativo do Sentinel Prime, alinhado ao MVP documentado.
+Scaffold inicial do aplicativo Android nativo do MoneyIQ Personal, alinhado ao MVP documentado.
 
 ## Escopo atual
 

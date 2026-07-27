@@ -1,4 +1,4 @@
-# Quadro de Gestão das Atividades — Sentinel Prime
+# Quadro de Gestão das Atividades — MoneyIQ Personal
 
 **Projetos de Software II** — Etapa 4.4 (Checkpoint 1)
 
@@ -46,12 +46,12 @@ com a situação atual de cada uma.
 | A09 | Diagrama de classes do modelo de dados | 4.8 | CP2 | Equipe | ✅ |
 | A10 | Implementação dos serviços de backend (REST, TDD) | 4.7 | CP3 | Equipe | ✅ |
 | A11 | Versionamento com Git + integração contínua (CI) | — | CP3 | Equipe | ✅ |
-| A12 | Implantação do backend em nuvem | — | CP3 | Equipe | ✅ Render — `https://sentinel-prime-api.onrender.com` (health UP) |
+| A12 | Implantação do backend em nuvem | — | CP3 | Equipe | ✅ Render — `https://moneyiq-personal-api.onrender.com` (health UP) |
 | A13 | Diagrama de classes das interações entre componentes | 4.8 | CP3 | Equipe | ✅ |
 | A14 | Construção do sistema web (React) | 4.9 | CP4 | Equipe | ✅ |
-| A15 | Implantação do frontend em nuvem | 4.9 | CP4 | Equipe | ✅ Vercel — `https://sentinel-prime-two.vercel.app` (integrado ao backend) |
+| A15 | Implantação do frontend em nuvem | 4.9 | CP4 | Equipe | ✅ Vercel — `https://moneyiq-personal-two.vercel.app` (integrado ao backend) |
 | A16 | Construção do sistema mobile (Android) | 4.10 | CP4 | Equipe | ✅ Integrado à API (login/cadastro + JWT + dashboard); build OK |
-| A17 | Disponibilizar o app para download (APK) | 4.10 | CP4 | Equipe | ✅ GitHub Releases — `v0.1.0` (`sentinel-prime-v0.1.0.apk`) |
+| A17 | Disponibilizar o app para download (APK) | 4.10 | CP4 | Equipe | ✅ GitHub Releases — `v0.1.0` (`moneyiq-personal-v0.1.0.apk`) |
 | A18 | Documentação do manual do usuário | 4.11 | CP4 | Equipe | ✅ |
 
 > Substitua "Equipe" pelo nome do(a) responsável de cada atividade (grupos de até 5 alunos).
@@ -74,9 +74,9 @@ com a situação atual de cada uma.
 Nenhum. Todas as atividades (A01–A18) estão concluídas.
 
 > Sistema completo e integrado em nuvem (web **e** app → API → banco):
-> - Backend: `https://sentinel-prime-api.onrender.com`
-> - Frontend: `https://sentinel-prime-two.vercel.app`
-> - App Android (APK): `https://github.com/AlexandreR84/Sentinel-Prime/releases/tag/v0.1.0`
+> - Backend: `https://moneyiq-personal-api.onrender.com`
+> - Frontend: `https://moneyiq-personal-two.vercel.app`
+> - App Android (APK): `https://github.com/AlexandreR84/MoneyIQ-Personal/releases/tag/v0.1.0`
 
 ---
 

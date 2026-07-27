@@ -1,10 +1,10 @@
 services:
   db:
     image: postgres:16-alpine
-    container_name: sentinel-prime-db
+    container_name: moneyiq-personal-db
     restart: unless-stopped
     environment:
-      POSTGRES_DB: sentinelprime
+      POSTGRES_DB: moneyiqpersonal
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
@@ -12,7 +12,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d sentinelprime"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d moneyiqpersonal"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -20,17 +20,17 @@ services:
   api:
     build:
       context: ./backend/springboot-api
-    container_name: sentinel-prime-api
+    container_name: moneyiq-personal-api
     restart: unless-stopped
     depends_on:
       db:
         condition: service_healthy
     environment:
-      DB_URL: jdbc:postgresql://db:5432/sentinelprime
+      DB_URL: jdbc:postgresql://db:5432/moneyiqpersonal
       DB_USERNAME: postgres
       DB_PASSWORD: postgres
       FRONTEND_URL: http://localhost:3000,http://localhost:5173
-      JWT_SECRET: sentinelprime-secret-key-must-be-at-least-64-characters-long-for-hs512
+      JWT_SECRET: moneyiqpersonal-secret-key-must-be-at-least-64-characters-long-for-hs512
       JWT_EXPIRATION: 86400000
     ports:
       - "8080:8080"
@@ -40,7 +40,7 @@ services:
       context: ./frontend
       args:
         VITE_API_URL: http://localhost:8080/api
-    container_name: sentinel-prime-web
+    container_name: moneyiq-personal-web
     restart: unless-stopped
     depends_on:
       - api

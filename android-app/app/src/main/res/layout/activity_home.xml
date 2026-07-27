@@ -36,7 +36,7 @@
 
             <Button
                 android:id="@+id/tab_dashboard"
-                style="@style/Widget.SentinelPrime.TabButton"
+                style="@style/Widget.MoneyIQPersonal.TabButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -44,7 +44,7 @@
 
             <Button
                 android:id="@+id/tab_receitas"
-                style="@style/Widget.SentinelPrime.TabButton"
+                style="@style/Widget.MoneyIQPersonal.TabButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -53,7 +53,7 @@
 
             <Button
                 android:id="@+id/tab_despesas"
-                style="@style/Widget.SentinelPrime.TabButton"
+                style="@style/Widget.MoneyIQPersonal.TabButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -62,7 +62,7 @@
 
             <Button
                 android:id="@+id/tab_conta"
-                style="@style/Widget.SentinelPrime.TabButton"
+                style="@style/Widget.MoneyIQPersonal.TabButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

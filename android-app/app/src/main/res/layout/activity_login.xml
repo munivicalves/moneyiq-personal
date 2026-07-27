@@ -45,7 +45,7 @@
                     android:textSize="15sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.SentinelPrime.TextInputLayout"
+                    style="@style/Widget.MoneyIQPersonal.TextInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp">
@@ -59,7 +59,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.SentinelPrime.TextInputLayout"
+                    style="@style/Widget.MoneyIQPersonal.TextInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -75,7 +75,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_login_submit"
-                    style="@style/Widget.SentinelPrime.PrimaryButton"
+                    style="@style/Widget.MoneyIQPersonal.PrimaryButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -83,7 +83,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_login_register"
-                    style="@style/Widget.SentinelPrime.TonalButton"
+                    style="@style/Widget.MoneyIQPersonal.TonalButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"

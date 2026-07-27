@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sentinel Prime</string>
+    <string name="app_name">MoneyIQ Personal</string>
     <string name="action_login">Entrar</string>
     <string name="action_register">Criar conta</string>
     <string name="action_create_account">Criar conta</string>

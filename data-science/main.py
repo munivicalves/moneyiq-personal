@@ -7,15 +7,15 @@ from pathlib import Path
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
-TOKEN = os.getenv("SENTINEL_TOKEN")
+TOKEN = os.getenv("MONEYIQ_TOKEN")
 API_URL = os.getenv(
-    "SENTINEL_API_URL",
+    "MONEYIQ_API_URL",
     "http://localhost:8080/api"
 )
 
 if not TOKEN:
     sys.exit(
-        "Defina SENTINEL_TOKEN com um JWT válido antes de executar o script."
+        "Defina MONEYIQ_TOKEN com um JWT válido antes de executar o script."
     )
 
 headers = {

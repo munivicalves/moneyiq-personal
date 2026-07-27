@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: sentinel-prime-api
+    name: moneyiq-personal-api
     runtime: docker
     dockerfilePath: ./backend/springboot-api/Dockerfile
     dockerContext: ./backend/springboot-api
@@ -10,15 +10,15 @@ services:
     envVars:
       - key: DB_URL
         fromDatabase:
-          name: sentinel-prime-db
+          name: moneyiq-personal-db
           property: connectionString
       - key: DB_USERNAME
         fromDatabase:
-          name: sentinel-prime-db
+          name: moneyiq-personal-db
           property: user
       - key: DB_PASSWORD
         fromDatabase:
-          name: sentinel-prime-db
+          name: moneyiq-personal-db
           property: password
       - key: FRONTEND_URL
         sync: false
@@ -28,7 +28,7 @@ services:
         value: "86400000"
 
 databases:
-  - name: sentinel-prime-db
+  - name: moneyiq-personal-db
     plan: free
-    databaseName: sentinelprime
-    user: sentinel_user
+    databaseName: moneyiqpersonal
+    user: moneyiq_user

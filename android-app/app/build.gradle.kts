@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.sentinelprime.android"
+    namespace = "com.moneyiqpersonal.android"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.sentinelprime.android"
+        applicationId = "com.moneyiqpersonal.android"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
@@ -46,7 +46,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
 
-    // Rede / integração com a API REST do Sentinel Prime
+    // Rede / integração com a API REST do MoneyIQ Personal
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")

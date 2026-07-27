@@ -58,13 +58,13 @@ export default function Splash() {
           >
             <img
               src="/logo.png"
-              alt="Sentinel Prime"
+              alt="MoneyIQ Personal"
               className="h-10 w-10 object-contain"
             />
 
             <div>
               <p className="text-sm font-bold leading-tight sm:text-base">
-                Sentinel Prime
+                MoneyIQ Personal
               </p>
 
               <p className="hidden text-xs text-slate-500 sm:block">
@@ -107,7 +107,7 @@ export default function Splash() {
               </div>
 
               <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-                Sentinel Prime
+                MoneyIQ Personal
               </h1>
 
               <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
@@ -173,7 +173,7 @@ export default function Splash() {
               </h2>
 
               <p className="mt-4 text-slate-600">
-                O Sentinel Prime combina registros do dia a dia, faturas e
+                O MoneyIQ Personal combina registros do dia a dia, faturas e
                 relatórios para mostrar onde seu dinheiro entra, sai e pode
                 render melhor.
               </p>

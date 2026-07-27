@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SentinelPrimeAndroid"
+rootProject.name = "MoneyIQPersonalAndroid"
 include(":app")

@@ -78,13 +78,13 @@ function Sidebar() {
       <div className="mb-4 lg:mb-10 flex items-center gap-3">
         <img
           src="/logo.png"
-          alt="Sentinel Prime"
+          alt="MoneyIQ Personal"
           className="w-12 h-12 object-contain"
         />
 
         <div>
           <h2 className="font-bold text-slate-800 dark:text-white">
-            Sentinel Prime
+            MoneyIQ Personal
           </h2>
 
           <p className="text-xs text-slate-400">

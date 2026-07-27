@@ -39,7 +39,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_splash_login"
-        style="@style/Widget.SentinelPrime.PrimaryButton"
+        style="@style/Widget.MoneyIQPersonal.PrimaryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -49,7 +49,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_splash_register"
-        style="@style/Widget.SentinelPrime.SecondaryButton"
+        style="@style/Widget.MoneyIQPersonal.SecondaryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"

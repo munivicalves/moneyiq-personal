@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Sugira uma melhoria para o Sentinel Prime
+about: Sugira uma melhoria para o MoneyIQ Personal
 title: "[Feature]: "
 labels: enhancement
 assignees: ""

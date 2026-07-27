@@ -1,8 +1,8 @@
-# Sentinel Prime
+# MoneyIQ Personal
 
-[![CI](https://github.com/AlexandreR84/Sentinel-Prime/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/AlexandreR84/Sentinel-Prime/actions/workflows/ci.yml)
+[![CI](https://github.com/AlexandreR84/MoneyIQ-Personal/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/AlexandreR84/MoneyIQ-Personal/actions/workflows/ci.yml)
 
-Sentinel Prime e um sistema de controle financeiro pessoal com backend Spring Boot, frontend React/Vite, aplicativo Android e scripts de apoio para data science.
+MoneyIQ Personal e um sistema de controle financeiro pessoal com backend Spring Boot, frontend React/Vite, aplicativo Android e scripts de apoio para data science.
 
 ## Estrutura
 
@@ -24,14 +24,14 @@ Sentinel Prime e um sistema de controle financeiro pessoal com backend Spring Bo
 
 O backend usa estas variaveis de ambiente, com defaults locais:
 
-- `DB_URL` - default `jdbc:postgresql://localhost:5432/sentinelprime`
+- `DB_URL` - default `jdbc:postgresql://localhost:5432/moneyiqpersonal`
 - `DB_USERNAME` - default `postgres`
 - `DB_PASSWORD` - default `postgres`
 
 Para sobrescrever no PowerShell antes de subir a aplicacao:
 
 ```powershell
-$env:DB_URL="jdbc:postgresql://localhost:5432/sentinelprime"
+$env:DB_URL="jdbc:postgresql://localhost:5432/moneyiqpersonal"
 $env:DB_USERNAME="postgres"
 $env:DB_PASSWORD="sua_senha"
 ```
@@ -71,7 +71,7 @@ npm run build
 
 Aplicativo nativo integrado ao backend (login/JWT e dashboard via API REST).
 
-**Download do APK:** [sentinel-prime-v0.1.0.apk](https://github.com/AlexandreR84/Sentinel-Prime/releases/download/v0.1.0/sentinel-prime-v0.1.0.apk) (Android 8.0+; habilite "Instalar de fontes desconhecidas").
+**Download do APK:** [moneyiq-personal-v0.1.0.apk](https://github.com/AlexandreR84/MoneyIQ-Personal/releases/download/v0.1.0/moneyiq-personal-v0.1.0.apk) (Android 8.0+; habilite "Instalar de fontes desconhecidas").
 
 ```powershell
 cd android-app

@@ -10,11 +10,11 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>com.sentinelprime</groupId>
+	<groupId>com.moneyiqpersonal</groupId>
 	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend</name>
-	<description>Sentinel Prime – Sistema de Controle Financeiro Pessoal</description>
+	<description>MoneyIQ Personal – Sistema de Controle Financeiro Pessoal</description>
 
 	<properties>
 		<java.version>21</java.version>

@@ -1,0 +1,80 @@
+
+<style>
+  #uc-card { background: #ffffff; color: #1e293b; padding: 16px; border-radius: 10px; }
+  #uc-card p { color: #475569; }
+  @media (prefers-color-scheme: dark) {
+    #uc-card { background: #0f172a; color: #e2e8f0; }
+    #uc-card p { color: #94a3b8; }
+  }
+</style>
+<div id="uc-card">
+<div id="uc" style="padding: 8px 0;"></div>
+<p style="font: 12px/1.5 'Anthropic Sans', sans-serif; margin: 4px 0 12px;">
+  Diagrama de casos de uso do MoneyIQ Personal. O sistema possui um único ator
+  (<strong>Usuário</strong>). <strong>UC01 — Cadastrar Usuário</strong> e
+  <strong>UC02 — Realizar Login</strong> são acessíveis sem autenticação; as demais
+  operações (UC03–UC08) exigem usuário autenticado (relação <em>«include» Realizar Login</em>).
+</p>
+</div>
+<script type="module">
+import mermaid from 'https://esm.sh/mermaid@11/dist/mermaid.esm.min.mjs';
+const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+await document.fonts.ready;
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'base',
+  fontFamily: '"Anthropic Sans", sans-serif',
+  themeVariables: {
+    darkMode: dark,
+    fontSize: '13px',
+    fontFamily: '"Anthropic Sans", sans-serif',
+    background: 'transparent',
+    mainBkg: dark ? '#1e293b' : '#f1f5f9',
+    primaryColor: dark ? '#1e293b' : '#f1f5f9',
+    primaryTextColor: dark ? '#e2e8f0' : '#1e293b',
+    primaryBorderColor: dark ? '#475569' : '#cbd5e1',
+    secondaryColor: dark ? '#1e293b' : '#f1f5f9',
+    tertiaryColor: dark ? '#0f172a' : '#ffffff',
+    lineColor: dark ? '#94a3b8' : '#64748b',
+    textColor: dark ? '#e2e8f0' : '#1e293b',
+    edgeLabelBackground: dark ? '#0f172a' : '#ffffff',
+    clusterBkg: dark ? '#0f172a' : '#f8fafc',
+    clusterBorder: dark ? '#334155' : '#cbd5e1',
+    attributeBackgroundColorOdd: dark ? '#1e293b' : '#f8fafc',
+    attributeBackgroundColorEven: dark ? '#243044' : '#eef2f7',
+    classText: dark ? '#e2e8f0' : '#1e293b',
+  },
+});
+const { svg } = await mermaid.render('uc-svg', `flowchart LR
+  usuario(("👤<br/>Usuário"))
+
+  subgraph SP["MoneyIQ Personal"]
+    direction TB
+    UC01(["UC01 · Cadastrar Usuário"])
+    UC02(["UC02 · Realizar Login"])
+    UC03(["UC03 · Registrar Receita"])
+    UC04(["UC04 · Registrar Despesa"])
+    UC05(["UC05 · Editar Transação"])
+    UC06(["UC06 · Excluir Transação"])
+    UC07(["UC07 · Visualizar Dashboard Financeiro"])
+    UC08(["UC08 · Gerar Relatório / Extrato"])
+  end
+
+  usuario --- UC01
+  usuario --- UC02
+  usuario --- UC03
+  usuario --- UC04
+  usuario --- UC05
+  usuario --- UC06
+  usuario --- UC07
+  usuario --- UC08
+
+  UC03 -. «include» .-> UC02
+  UC04 -. «include» .-> UC02
+  UC05 -. «include» .-> UC02
+  UC06 -. «include» .-> UC02
+  UC07 -. «include» .-> UC02
+  UC08 -. «include» .-> UC02
+`);
+document.getElementById('uc').innerHTML = svg;
+</script>
