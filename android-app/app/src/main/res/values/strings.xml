@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Sentinel Prime</string>
+    <string name="action_login">Entrar</string>
+    <string name="action_register">Criar conta</string>
+    <string name="action_create_account">Criar conta</string>
+    <string name="action_back_to_login">Voltar para login</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Senha</string>
+    <string name="splash_subtitle">Controle financeiro inteligente em um unico lugar.</string>
+    <string name="login_subtitle">Acesse sua visao financeira consolidada.</string>
+    <string name="register_subtitle">Comece a registrar receitas e despesas no app Android.</string>
+    <string name="home_subtitle">Base inicial em Java para o MVP documentado.</string>
+    <string name="summary_title">Resumo financeiro</string>
+    <string name="card_receitas">Receitas</string>
+    <string name="card_despesas">Despesas</string>
+    <string name="card_saldo">Saldo</string>
+    <string name="value_receitas">R$ 5.000,00</string>
+    <string name="value_despesas">R$ 3.200,00</string>
+    <string name="value_saldo">R$ 1.800,00</string>
+    <string name="latest_transactions">Ultimas transacoes</string>
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_receitas">Receitas</string>
+    <string name="tab_despesas">Despesas</string>
+    <string name="tab_conta">Conta</string>
+    <string name="dashboard_description">Painel inicial com totais do periodo, saldo e visao resumida das movimentacoes.</string>
+    <string name="receitas_description">Area destinada ao cadastro e consulta de entradas financeiras do usuario.</string>
+    <string name="despesas_description">Area destinada ao registro de despesas e classificacao por categoria.</string>
+    <string name="conta_description">Historico consolidado para filtros por periodo e acompanhamento do saldo.</string>
+</resources>

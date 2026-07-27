@@ -1,0 +1,173 @@
+
+<style>
+  #der-card { background: #ffffff; color: #1e293b; padding: 16px; border-radius: 10px; }
+  #der-card p { color: #475569; }
+  @media (prefers-color-scheme: dark) {
+    #der-card { background: #0f172a; color: #e2e8f0; }
+    #der-card p { color: #94a3b8; }
+  }
+</style>
+<div id="der-card">
+<div id="erd" style="padding: 8px 0;"></div>
+<p style="font: 12px/1.5 'Anthropic Sans', sans-serif; margin: 4px 0 12px;">
+  Modelo com 8 entidades, todas implementadas no backend (pacote <code>com.sentinelprime.backend.model</code>).
+  <strong>CONTA_BANCARIA</strong> e <strong>FATURA_CARTAO</strong> foram adicionadas para completar o modelo.
+  CATEGORIA é uma entidade independente:
+  a classificação das transações é feita pelos enums <em>TipoTransacao</em> / <em>CategoriaDespesa</em>.
+</p>
+</div>
+<script type="module">
+import mermaid from 'https://esm.sh/mermaid@11/dist/mermaid.esm.min.mjs';
+const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+await document.fonts.ready;
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'base',
+  fontFamily: '"Anthropic Sans", sans-serif',
+  themeVariables: {
+    darkMode: dark,
+    fontSize: '13px',
+    fontFamily: '"Anthropic Sans", sans-serif',
+    background: 'transparent',
+    mainBkg: dark ? '#1e293b' : '#f1f5f9',
+    primaryColor: dark ? '#1e293b' : '#f1f5f9',
+    primaryTextColor: dark ? '#e2e8f0' : '#1e293b',
+    primaryBorderColor: dark ? '#475569' : '#cbd5e1',
+    secondaryColor: dark ? '#1e293b' : '#f1f5f9',
+    tertiaryColor: dark ? '#0f172a' : '#ffffff',
+    lineColor: dark ? '#94a3b8' : '#64748b',
+    textColor: dark ? '#e2e8f0' : '#1e293b',
+    edgeLabelBackground: dark ? '#0f172a' : '#ffffff',
+    clusterBkg: dark ? '#0f172a' : '#f8fafc',
+    clusterBorder: dark ? '#334155' : '#cbd5e1',
+    attributeBackgroundColorOdd: dark ? '#1e293b' : '#f8fafc',
+    attributeBackgroundColorEven: dark ? '#243044' : '#eef2f7',
+    classText: dark ? '#e2e8f0' : '#1e293b',
+  },
+});
+const { svg } = await mermaid.render('erd-svg', `erDiagram
+  USUARIO ||--o{ TRANSACAO : "possui"
+  USUARIO ||--o{ DESPESA_FIXA : "possui"
+  USUARIO ||--o{ CARTAO_CREDITO : "possui"
+  USUARIO ||--o{ CONTA_BANCARIA : "possui"
+  CARTAO_CREDITO ||--o{ DESPESA_CARTAO : "registra"
+  CARTAO_CREDITO ||--o{ FATURA_CARTAO : "gera"
+  FATURA_CARTAO ||--o{ DESPESA_CARTAO : "agrupa"
+
+  USUARIO {
+    bigint id_usuario PK
+    varchar nome
+    varchar email UK
+    varchar senha_hash
+    datetime data_cadastro
+    boolean ativo
+  }
+
+  TRANSACAO {
+    bigint id_transacao PK
+    bigint id_usuario FK
+    enum tipo
+    enum tipo_receita
+    enum categoria_despesa
+    boolean despesa_fixa
+    date data_fim_recorrencia
+    varchar id_recorrencia
+    varchar descricao
+    decimal valor
+    date data_transacao
+    datetime data_criacao
+  }
+
+  CATEGORIA {
+    bigint id_categoria PK
+    varchar nome UK
+    varchar icone
+    varchar cor
+  }
+
+  CARTAO_CREDITO {
+    bigint id_cartao PK
+    bigint id_usuario FK
+    varchar nome
+    varchar bandeira
+    int dia_vencimento
+    datetime data_criacao
+  }
+
+  DESPESA_CARTAO {
+    bigint id_despesa_cartao PK
+    bigint id_cartao FK
+    bigint id_fatura FK
+    enum categoria_despesa
+    varchar descricao
+    decimal valor
+    int parcela_atual
+    int total_parcelas
+    varchar competencia
+    date data_compra
+    datetime data_criacao
+  }
+
+  DESPESA_FIXA {
+    bigint id_despesa_fixa PK
+    bigint id_usuario FK
+    varchar descricao
+    decimal valor
+    int dia_vencimento
+    date data_inicio
+    date data_fim
+    boolean indeterminado
+    enum status
+    datetime data_criacao
+  }
+
+  CONTA_BANCARIA {
+    bigint id_conta PK
+    bigint id_usuario FK
+    varchar nome
+    varchar banco
+    varchar agencia
+    varchar numero_conta
+    enum tipo_conta
+    decimal saldo_inicial
+    boolean ativa
+    datetime data_criacao
+  }
+
+  FATURA_CARTAO {
+    bigint id_fatura PK
+    bigint id_cartao FK
+    varchar competencia
+    decimal valor_total
+    date data_vencimento
+    boolean paga
+    date data_pagamento
+    datetime data_criacao
+  }
+`);
+document.getElementById('erd').innerHTML = svg;
+
+document.querySelectorAll('#erd svg.erDiagram .node').forEach(node => {
+  const firstPath = node.querySelector('path[d]');
+  if (!firstPath) return;
+  const d = firstPath.getAttribute('d');
+  const nums = d.match(/-?[\d.]+/g)?.map(Number);
+  if (!nums || nums.length < 8) return;
+  const xs = [nums[0], nums[2], nums[4], nums[6]];
+  const ys = [nums[1], nums[3], nums[5], nums[7]];
+  const x = Math.min(...xs), y = Math.min(...ys);
+  const w = Math.max(...xs) - x, h = Math.max(...ys) - y;
+  const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  rect.setAttribute('x', x); rect.setAttribute('y', y);
+  rect.setAttribute('width', w); rect.setAttribute('height', h);
+  rect.setAttribute('rx', '8');
+  for (const a of ['fill', 'stroke', 'stroke-width', 'class', 'style']) {
+    if (firstPath.hasAttribute(a)) rect.setAttribute(a, firstPath.getAttribute(a));
+  }
+  firstPath.replaceWith(rect);
+});
+
+document.querySelectorAll('#erd svg.erDiagram .row-rect-odd path, #erd svg.erDiagram .row-rect-even path').forEach(p => {
+  p.setAttribute('stroke', 'none');
+});
+</script>
